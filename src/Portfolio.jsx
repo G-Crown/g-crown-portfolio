@@ -574,6 +574,9 @@ export default function Portfolio() {
               <a href="https://facebook.com/g.crown" target="_blank" rel="noopener noreferrer" className="p-4 bg-blue-600/10 rounded-lg hover:bg-blue-600/20 text-blue-500 transition-colors hover:scale-110 transform duration-300">
                 <Facebook size={24} />
               </a>
+              <a href="https://wa.me/234XXXXXXXXXX" target="_blank" rel="noopener noreferrer" className="p-4 bg-green-500/10 rounded-lg hover:bg-green-500/20 text-green-400 transition-colors hover:scale-110 transform duration-300">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </a>
               <a href="mailto:contact@gcrown.com" className="p-4 bg-red-500/10 rounded-lg hover:bg-red-500/20 text-red-400 transition-colors hover:scale-110 transform duration-300">
                 <Mail size={24} />
               </a>
@@ -665,77 +668,108 @@ export default function Portfolio() {
         {currentPage === 'contact' && <ContactPage />}
       </div>
 
-      {/* Floating Profile Card - Bottom Right */}
-      <div className="fixed bottom-6 right-6 z-30 animate-slideInRight">
-        <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl p-1 shadow-2xl">
-          <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl p-6 min-w-72 space-y-4">
-            {/* Avatar Circle */}
-            <div className="flex justify-center">
-              <div className="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center shadow-lg">
-                <div className="w-20 h-20 rounded-full bg-slate-900 flex items-center justify-center text-3xl font-bold text-emerald-400">
-                  GC
+      {/* Floating Profile Card - Bottom Right (Compact & Interactive) */}
+      <div className="fixed bottom-8 right-8 z-30 group">
+        {/* Main Floating Button */}
+        <div className="relative w-16 h-16">
+          {/* Expanded Card (shows on hover) */}
+          <div className="absolute bottom-0 right-0 w-80 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-4 origin-bottom-right">
+            <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-2xl p-1 shadow-2xl">
+              <div className="bg-gradient-to-br from-slate-900 to-slate-950 rounded-2xl p-6 space-y-4">
+                {/* Avatar Circle */}
+                <div className="flex justify-center">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center shadow-lg">
+                    <div className="w-16 h-16 rounded-full bg-slate-900 flex items-center justify-center text-2xl font-bold text-emerald-400">
+                      GC
+                    </div>
+                  </div>
                 </div>
+
+                {/* Name */}
+                <div className="text-center space-y-1">
+                  <h3 className="text-base font-bold text-white">Olugbenga Stephen Oke</h3>
+                  <p className="text-xs text-emerald-400 font-semibold">Leadership Strategist & PM</p>
+                  <p className="text-xs text-gray-400">Founder, Lucid Hub</p>
+                </div>
+
+                {/* Quick Bio */}
+                <p className="text-xs text-gray-300 text-center leading-relaxed">
+                  Inspiring leaders through strategy and intentional growth.
+                </p>
+
+                {/* Social Links */}
+                <div className="flex justify-center gap-2 flex-wrap">
+                  <a
+                    href="https://linkedin.com/in/g-crown"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-blue-500/20 rounded-lg text-blue-400 hover:bg-blue-500/40 transition-all duration-300 transform hover:scale-110"
+                    title="LinkedIn"
+                  >
+                    <Linkedin size={16} />
+                  </a>
+                  <a
+                    href="https://twitter.com/gcrown_"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-blue-400/20 rounded-lg text-blue-300 hover:bg-blue-400/40 transition-all duration-300 transform hover:scale-110"
+                    title="Twitter"
+                  >
+                    <Twitter size={16} />
+                  </a>
+                  <a
+                    href="https://facebook.com/g.crown"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-blue-600/20 rounded-lg text-blue-500 hover:bg-blue-600/40 transition-all duration-300 transform hover:scale-110"
+                    title="Facebook"
+                  >
+                    <Facebook size={16} />
+                  </a>
+                  <a
+                    href="https://wa.me/234XXXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-2 bg-green-500/20 rounded-lg text-green-400 hover:bg-green-500/40 transition-all duration-300 transform hover:scale-110"
+                    title="WhatsApp"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                  </a>
+                  <a
+                    href="mailto:contact@gcrown.com"
+                    className="p-2 bg-red-500/20 rounded-lg text-red-400 hover:bg-red-500/40 transition-all duration-300 transform hover:scale-110"
+                    title="Email"
+                  >
+                    <Mail size={16} />
+                  </a>
+                </div>
+
+                {/* CTA Button */}
+                <button
+                  onClick={() => navigateTo('contact')}
+                  className="w-full py-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 text-xs"
+                >
+                  Get In Touch
+                </button>
               </div>
             </div>
-
-            {/* Name */}
-            <div className="text-center space-y-1">
-              <h3 className="text-lg font-bold text-white">Olugbenga Stephen Oke</h3>
-              <p className="text-sm text-emerald-400 font-semibold">Leadership Strategist & PM</p>
-              <p className="text-xs text-gray-400">Founder, Lucid Hub</p>
-            </div>
-
-            {/* Quick Bio */}
-            <p className="text-sm text-gray-300 text-center leading-relaxed">
-              Inspiring leaders and transforming organizations through strategic initiatives and intentional growth.
-            </p>
-
-            {/* Social Links */}
-            <div className="flex justify-center gap-3 pt-2">
-              <a
-                href="https://linkedin.com/in/g-crown"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-blue-500/20 rounded-lg text-blue-400 hover:bg-blue-500/40 transition-all duration-300 transform hover:scale-110"
-                title="LinkedIn"
-              >
-                <Linkedin size={18} />
-              </a>
-              <a
-                href="https://twitter.com/gcrown_"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-blue-400/20 rounded-lg text-blue-300 hover:bg-blue-400/40 transition-all duration-300 transform hover:scale-110"
-                title="Twitter"
-              >
-                <Twitter size={18} />
-              </a>
-              <a
-                href="https://facebook.com/g.crown"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-blue-600/20 rounded-lg text-blue-500 hover:bg-blue-600/40 transition-all duration-300 transform hover:scale-110"
-                title="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <a
-                href="mailto:contact@gcrown.com"
-                className="p-2 bg-red-500/20 rounded-lg text-red-400 hover:bg-red-500/40 transition-all duration-300 transform hover:scale-110"
-                title="Email"
-              >
-                <Mail size={18} />
-              </a>
-            </div>
-
-            {/* CTA Button */}
-            <button
-              onClick={() => navigateTo('contact')}
-              className="w-full mt-3 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-emerald-500/50 transition-all duration-300 text-sm"
-            >
-              Get In Touch
-            </button>
           </div>
+
+          {/* Compact Avatar Button (always visible) */}
+          <button
+            onClick={() => navigateTo('contact')}
+            className="w-full h-full rounded-full bg-gradient-to-br from-emerald-600 to-teal-700 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:scale-110 transform"
+            title="Connect with G.Crown"
+          >
+            <div className="w-full h-full rounded-full bg-gradient-to-br from-emerald-400 to-blue-500 flex items-center justify-center text-xl font-bold text-white hover:scale-95 transition-transform">
+              GC
+            </div>
+          </button>
+        </div>
+
+        {/* Hover Indicator */}
+        <div className="absolute -top-8 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-800 text-white text-xs px-3 py-1 rounded-full whitespace-nowrap">
+          Connect
         </div>
       </div>
 
