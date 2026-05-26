@@ -19,7 +19,12 @@ export default function Portfolio() {
   const fetchWordPressPosts = async () => {
     try {
       setPostsLoading(true);
-      const response = await fetch('https://theboldn.wordpress.com/wp-json/wp/v2/posts?per_page=20&_embed');
+      // Using CORS proxy to bypass CORS restrictions
+      const corsProxy = 'https://api.allorigins.win/raw?url=';
+      const wordPressUrl = 'https://theboldn.wordpress.com/wp-json/wp/v2/posts?per_page=20&_embed';
+      const proxyUrl = corsProxy + encodeURIComponent(wordPressUrl);
+      
+      const response = await fetch(proxyUrl);
       if (!response.ok) throw new Error('Failed to fetch posts');
       const data = await response.json();
       
