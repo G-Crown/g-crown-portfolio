@@ -700,7 +700,7 @@ export default function Portfolio() {
                 {/* Social Links */}
                 <div className="flex justify-center gap-2 flex-wrap">
                   <a
-                    href="https://linkedin.com/in/g-crown"
+                    href="https://www.linkedin.com/in/olugbengastephenoke"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-blue-500/20 rounded-lg text-blue-400 hover:bg-blue-500/40 transition-all duration-300 transform hover:scale-110"
@@ -718,7 +718,7 @@ export default function Portfolio() {
                     <Twitter size={16} />
                   </a>
                   <a
-                    href="https://facebook.com/g.crown"
+                    href="https://www.facebook.com/gbenga.stephen.773?mibextid=ZbWKwL"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-blue-600/20 rounded-lg text-blue-500 hover:bg-blue-600/40 transition-all duration-300 transform hover:scale-110"
@@ -727,7 +727,7 @@ export default function Portfolio() {
                     <Facebook size={16} />
                   </a>
                   <a
-                    href="https://wa.me/234XXXXXXXXXX"
+                    href="https://wa.me/2348088372925"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 bg-green-500/20 rounded-lg text-green-400 hover:bg-green-500/40 transition-all duration-300 transform hover:scale-110"
